@@ -7,10 +7,14 @@
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=Open+Sans|Sedgwick+Ave+Display" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog.css' %}">
+
     <title>Rachel's blog</title>
   </head>
   <body>
     <div class="page-header">
+{% if user.is_authenticated %}
+      <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
         <h1><a href="/">they're good posts brent</a></h1>
     </div>
     <div class="content container">
