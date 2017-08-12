@@ -5,6 +5,9 @@
     {% for post in posts %}
       <div class="posts">
           <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+          {% if post.img %}
+          <img src="{{ post.img.url}}">
+          {% endif %}
           <p>{{ post.text|safe|linebreaksbr }}</p>
           <p class="footer">published: {{ post.published_date }}</p>
       </div>

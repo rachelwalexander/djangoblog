@@ -76,3 +76,7 @@ img {
     border-radius: 20%;
     max-width:500px;
 }
+
+img.imghead {
+  max-width: 600px;
+}
