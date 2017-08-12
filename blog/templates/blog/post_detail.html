@@ -14,6 +14,6 @@
         {% if post.img %}
         <img class="imghead" src="{{ post.img.url}}">
         {% endif %}
-        <p class="textdetail">{{ post.text|linebreaksbr }}</p>
+        <p class="textdetail">{{ post.text|safe|linebreaksbr }}</p>
     </div>
 {% endblock %}
